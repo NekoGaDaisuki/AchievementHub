@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+      <Color id="Curseur par d&#xe9;faut"/>
+    </Property>
+  </Properties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="assassinsLeagueStylePane" min="-2" pref="535" max="-2" attributes="0"/>
+                  <Component id="minotaurStylePane" min="-2" pref="425" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="darkBrotherhoodStylePane" pref="500" max="32767" attributes="0"/>
+                  <Component id="orderHourStylePane" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="assassinsLeagueStylePane" min="-2" pref="239" max="-2" attributes="0"/>
+                  <Component id="darkBrotherhoodStylePane" min="-2" pref="239" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="orderHourStylePane" min="-2" pref="239" max="-2" attributes="0"/>
+                  <Component id="minotaurStylePane" alignment="0" min="-2" pref="239" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="265" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="assassinsLeagueStylePane">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="assassinsLeagueStyleTable">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="2" rowCount="14">
+                <Column editable="false" title="" type="java.lang.Object">
+                  <Data value="Motifs Artisanaux 34, Ch. 1 : Les Haches de la Ligue des Assassins"/>
+                  <Data value="Motifs Artisanaux 34, Ch. 2 : Les Ceintures de la Ligue des Assassins"/>
+                  <Data value="Motifs Artisanaux 34, Ch. 3 : Les Bottes de la Ligue des Assassins"/>
+                  <Data value="Motifs Artisanaux 34, Ch. 4 : Les Arcs de la Ligue des Assassins"/>
+                  <Data value="Motifs Artisanaux 34, Ch. 5 : Les Plastrons de la Ligue des Assassins"/>
+                  <Data value="Motifs Artisanaux 34, Ch. 6 : Les Dagues de la Ligue des Assassins"/>
+                  <Data value="Motifs Artisanaux 34, Ch. 7 : Les Gants de la Ligue des Assassins"/>
+                  <Data value="Motifs Artisanaux 34, Ch. 8 : Les Casques de la Ligue des Assassins"/>
+                  <Data value="Motifs Artisanaux 34, Ch. 9 : Les Jambi&#xe8;res de la Ligue des Assassins"/>
+                  <Data value="Motifs Artisanaux 34, Ch. 10 : Les Masses de la Ligue des Assassins"/>
+                  <Data value="Motifs Artisanaux 34, Ch. 11 : Les Boucliers de la Ligue des Assassins"/>
+                  <Data value="Motifs Artisanaux 34, Ch. 12 : Les &#xc9;pauli&#xe8;res de la Ligue des Assassins"/>
+                  <Data value="Motifs Artisanaux 34, Ch. 13 : Les B&#xe2;tons de la Ligue des Assassins"/>
+                  <Data value="Motifs Artisanaux 34, Ch. 14 : Les &#xc9;p&#xe9;es de la Ligue des Assassins"/>
+                </Column>
+                <Column editable="true" title="" type="java.lang.Boolean"/>
+              </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="350" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="60" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="HubResearchClothingPanel_mediumArmor"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JScrollPane" name="darkBrotherhoodStylePane">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="darkBrotherhoodStyleTable">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="2" rowCount="14">
+                <Column editable="false" title="" type="java.lang.Object">
+                  <Data value="Motifs Artisanaux 36, Ch. 1 : Les Haches de la Confr&#xe9;rie Noire"/>
+                  <Data value="Motifs Artisanaux 36, Ch. 2 : Les Ceintures de la Confr&#xe9;rie Noire"/>
+                  <Data value="Motifs Artisanaux 36, Ch. 3 : Les Bottes de la Confr&#xe9;rie Noire"/>
+                  <Data value="Motifs Artisanaux 36, Ch. 4 : Les Arcs de la Confr&#xe9;rie Noire"/>
+                  <Data value="Motifs Artisanaux 36, Ch. 5 : Les Plastrons de la Confr&#xe9;rie Noire"/>
+                  <Data value="Motifs Artisanaux 36, Ch. 6 : Les Dagues de la Confr&#xe9;rie Noire"/>
+                  <Data value="Motifs Artisanaux 36, Ch. 7 : Les Gants de la Confr&#xe9;rie Noire"/>
+                  <Data value="Motifs Artisanaux 36, Ch. 8 : Les Casques de la Confr&#xe9;rie Noire"/>
+                  <Data value="Motifs Artisanaux 36, Ch. 9 : Les Jambi&#xe8;res de la Confr&#xe9;rie Noire"/>
+                  <Data value="Motifs Artisanaux 36, Ch. 10 : Les Masses de la Confr&#xe9;rie Noire"/>
+                  <Data value="Motifs Artisanaux 36, Ch. 11 : Les Boucliers de la Confr&#xe9;rie Noire"/>
+                  <Data value="Motifs Artisanaux 36, Ch. 12 : Les &#xc9;pauli&#xe8;res de la Confr&#xe9;rie Noire"/>
+                  <Data value="Motifs Artisanaux 36, Ch. 13 : Les B&#xe2;tons de la Confr&#xe9;rie Noire"/>
+                  <Data value="Motifs Artisanaux 36, Ch. 14 : Les &#xc9;p&#xe9;es de la Confr&#xe9;rie Noire"/>
+                </Column>
+                <Column editable="true" title="" type="java.lang.Boolean"/>
+              </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="350" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="60" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="HubResearchClothingPanel_mediumArmor"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JScrollPane" name="orderHourStylePane">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="orderHourStyleTable">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="2" rowCount="14">
+                <Column editable="false" title="" type="java.lang.Object">
+                  <Data value="Motifs Artisanaux 40, Ch. 1 : Les Haches de l&apos;Ordre des Heures"/>
+                  <Data value="Motifs Artisanaux 40, Ch. 2 : Les Ceintures de l&apos;Ordre des Heures"/>
+                  <Data value="Motifs Artisanaux 40, Ch. 3 : Les Bottes de l&apos;Ordre des Heures"/>
+                  <Data value="Motifs Artisanaux 40, Ch. 4 : Les Arcs de l&apos;Ordre des Heures"/>
+                  <Data value="Motifs Artisanaux 40, Ch. 5 : Les Plastrons de l&apos;Ordre des Heures"/>
+                  <Data value="Motifs Artisanaux 40, Ch. 6 : Les Dagues de l&apos;Ordre des Heures"/>
+                  <Data value="Motifs Artisanaux 40, Ch. 7 : Les Gants de l&apos;Ordre des Heures"/>
+                  <Data value="Motifs Artisanaux 40, Ch. 8 : Les Casques de l&apos;Ordre des Heures"/>
+                  <Data value="Motifs Artisanaux 40, Ch. 9 : Les Jambi&#xe8;res de l&apos;Ordre des Heures"/>
+                  <Data value="Motifs Artisanaux 40, Ch. 10 : Les Masses de l&apos;Ordre des Heures"/>
+                  <Data value="Motifs Artisanaux 40, Ch. 11 : Les Boucliers de l&apos;Ordre des Heures"/>
+                  <Data value="Motifs Artisanaux 40, Ch. 12 : Les &#xc9;pauli&#xe8;res de l&apos;Ordre des Heures"/>
+                  <Data value="Motifs Artisanaux 40, Ch. 13 : Les B&#xe2;tons de l&apos;Ordre des Heures"/>
+                  <Data value="Motifs Artisanaux 40, Ch. 14 : Les &#xc9;p&#xe9;es de l&apos;Ordre des Heures"/>
+                </Column>
+                <Column editable="true" title="" type="java.lang.Boolean"/>
+              </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="350" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="60" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="HubResearchClothingPanel_mediumArmor"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JScrollPane" name="minotaurStylePane">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="minotaurStyleTable">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="2" rowCount="14">
+                <Column editable="false" title="" type="java.lang.Object">
+                  <Data value="Motifs Artisanaux 39, Ch. 1 : Les Haches de Minotaure"/>
+                  <Data value="Motifs Artisanaux 39, Ch. 2 : Les Ceintures de Minotaure"/>
+                  <Data value="Motifs Artisanaux 39, Ch. 3 : Les Bottes de Minotaure"/>
+                  <Data value="Motifs Artisanaux 39, Ch. 4 : Les Arcs de Minotaure"/>
+                  <Data value="Motifs Artisanaux 39, Ch. 5 : Les Plastrons de Minotaure"/>
+                  <Data value="Motifs Artisanaux 39, Ch. 6 : Les Dagues de Minotaure"/>
+                  <Data value="Motifs Artisanaux 39, Ch. 7 : Les Gants de Minotaure"/>
+                  <Data value="Motifs Artisanaux 39, Ch. 8 : Les Casques de Minotaure"/>
+                  <Data value="Motifs Artisanaux 39, Ch. 9 : Les Jambi&#xe8;res de Minotaure"/>
+                  <Data value="Motifs Artisanaux 39, Ch. 10 : Les Masses de Minotaure"/>
+                  <Data value="Motifs Artisanaux 39, Ch. 11 : Les Boucliers de Minotaure"/>
+                  <Data value="Motifs Artisanaux 39, Ch. 12 : Les &#xc9;pauli&#xe8;res de Minotaure"/>
+                  <Data value="Motifs Artisanaux 39, Ch. 13 : Les B&#xe2;tons de Minotaure"/>
+                  <Data value="Motifs Artisanaux 39, Ch. 14 : Les &#xc9;p&#xe9;es de Minotaure"/>
+                </Column>
+                <Column editable="true" title="" type="java.lang.Boolean"/>
+              </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="350" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="60" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="HubResearchClothingPanel_mediumArmor"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

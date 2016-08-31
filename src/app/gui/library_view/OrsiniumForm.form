@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+      <Color id="Curseur par d&#xe9;faut"/>
+    </Property>
+  </Properties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="malacathStylePane" min="-2" pref="400" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="ancientsOrcsStylePane" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="trinimacStylePane" min="-2" pref="390" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="152" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="ancientsOrcsStylePane" min="-2" pref="239" max="-2" attributes="0"/>
+                  <Component id="trinimacStylePane" alignment="1" min="-2" pref="239" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="malacathStylePane" min="-2" pref="239" max="-2" attributes="0"/>
+              <EmptySpace pref="265" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="ancientsOrcsStylePane">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="ancientsOrcsStyleTable">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="2" rowCount="14">
+                <Column editable="false" title="" type="java.lang.Object">
+                  <Data value="Motifs Artisanaux 21, Ch. 1 : Les Haches Orques Antiques"/>
+                  <Data value="Motifs Artisanaux 21, Ch. 2 : Les Ceintures Orques Antiques"/>
+                  <Data value="Motifs Artisanaux 21, Ch. 3 : Les Bottes Orques Antiques"/>
+                  <Data value="Motifs Artisanaux 21, Ch. 4 : Les Arcs Orques Antiques"/>
+                  <Data value="Motifs Artisanaux 21, Ch. 5 : Les Plastrons Orques Antiques"/>
+                  <Data value="Motifs Artisanaux 21, Ch. 6 : Les Dagues Orques Antiques"/>
+                  <Data value="Motifs Artisanaux 21, Ch. 7 : Les Gants Orques Antiques"/>
+                  <Data value="Motifs Artisanaux 21, Ch. 8 : Les Casques Orques Antiques"/>
+                  <Data value="Motifs Artisanaux 21, Ch. 9 : Les Jambi&#xe8;res Orques Antiques"/>
+                  <Data value="Motifs Artisanaux 21, Ch. 10 : Les Masses Orques Antiques"/>
+                  <Data value="Motifs Artisanaux 21, Ch. 11 : Les Boucliers Orques Antiques"/>
+                  <Data value="Motifs Artisanaux 21, Ch. 12 : Les &#xc9;pauli&#xe8;res Orques Antiques"/>
+                  <Data value="Motifs Artisanaux 21, Ch. 13 : Les B&#xe2;tons Orques Antiques"/>
+                  <Data value="Motifs Artisanaux 21, Ch. 14 : Les &#xc9;p&#xe9;es Orques Antiques"/>
+                </Column>
+                <Column editable="true" title="" type="java.lang.Boolean"/>
+              </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="350" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="60" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="HubResearchClothingPanel_mediumArmor"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JScrollPane" name="trinimacStylePane">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="trinimacStyleTable">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="2" rowCount="14">
+                <Column editable="false" title="" type="java.lang.Object">
+                  <Data value="Motifs Artisanaux 22, Ch. 1 : Les Haches de Trinimac"/>
+                  <Data value="Motifs Artisanaux 22, Ch. 2 : Les Ceintures de Trinimac"/>
+                  <Data value="Motifs Artisanaux 22, Ch. 3 : Les Bottes de Trinimac"/>
+                  <Data value="Motifs Artisanaux 22, Ch. 4 : Les Arcs de Trinimac"/>
+                  <Data value="Motifs Artisanaux 22, Ch. 5 : Les Plastrons de Trinimac"/>
+                  <Data value="Motifs Artisanaux 22, Ch. 6 : Les Dagues de Trinimac"/>
+                  <Data value="Motifs Artisanaux 22, Ch. 7 : Les Gants de Trinimac"/>
+                  <Data value="Motifs Artisanaux 22, Ch. 8 : Les Casques de Trinimac"/>
+                  <Data value="Motifs Artisanaux 22, Ch. 9 : Les Jambi&#xe8;res de Trinimac"/>
+                  <Data value="Motifs Artisanaux 22, Ch. 10 : Les Masses de Trinimac"/>
+                  <Data value="Motifs Artisanaux 22, Ch. 11 : Les Boucliers de Trinimac"/>
+                  <Data value="Motifs Artisanaux 22, Ch. 12 : Les &#xc9;pauli&#xe8;res de Trinimac"/>
+                  <Data value="Motifs Artisanaux 22, Ch. 13 : Les B&#xe2;tons de Trinimac"/>
+                  <Data value="Motifs Artisanaux 22, Ch. 14 : Les &#xc9;p&#xe9;es de Trinimac"/>
+                </Column>
+                <Column editable="true" title="" type="java.lang.Boolean"/>
+              </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="350" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="60" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="HubResearchClothingPanel_mediumArmor"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JScrollPane" name="malacathStylePane">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="malacathStyleTable">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="2" rowCount="14">
+                <Column editable="false" title="" type="java.lang.Object">
+                  <Data value="Motifs Artisanaux 23, Ch. 1 : Les Haches de Malacath"/>
+                  <Data value="Motifs Artisanaux 23, Ch. 2 : Les Ceintures de Malacath"/>
+                  <Data value="Motifs Artisanaux 23, Ch. 3 : Les Bottes de Malacath"/>
+                  <Data value="Motifs Artisanaux 23, Ch. 4 : Les Arcs de Malacath"/>
+                  <Data value="Motifs Artisanaux 23, Ch. 5 : Les Plastrons de Malacath"/>
+                  <Data value="Motifs Artisanaux 23, Ch. 6 : Les Dagues de Malacath"/>
+                  <Data value="Motifs Artisanaux 23, Ch. 7 : Les Gants de Malacath"/>
+                  <Data value="Motifs Artisanaux 23, Ch. 8 : Les Casques de Malacath"/>
+                  <Data value="Motifs Artisanaux 23, Ch. 9 : Les Jambi&#xe8;res de Malacath"/>
+                  <Data value="Motifs Artisanaux 23, Ch. 10 : Les Masses de Malacath"/>
+                  <Data value="Motifs Artisanaux 23, Ch. 11 : Les Boucliers de Malacath"/>
+                  <Data value="Motifs Artisanaux 23, Ch. 12 : Les &#xc9;pauli&#xe8;res de Malacath"/>
+                  <Data value="Motifs Artisanaux 23, Ch. 13 : Les B&#xe2;tons de Malacath"/>
+                  <Data value="Motifs Artisanaux 23, Ch. 14 : Les &#xc9;p&#xe9;es de Malacath"/>
+                </Column>
+                <Column editable="true" title="" type="java.lang.Boolean"/>
+              </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="350" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="60" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="HubResearchClothingPanel_mediumArmor"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

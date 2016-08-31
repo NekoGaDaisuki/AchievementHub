@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+      <Color id="Curseur par d&#xe9;faut"/>
+    </Property>
+  </Properties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="raresStylesPane" alignment="0" min="-2" pref="351" max="-2" attributes="0"/>
+                  <Component id="alliancesStylesPane" alignment="0" min="-2" pref="955" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="dwarwenStylePane" min="-2" pref="390" max="-2" attributes="0"/>
+                          <Component id="mercenaryStylePane" min="-2" pref="390" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="absouteStylePane" min="-2" pref="351" max="-2" attributes="0"/>
+                          <Component id="glassStylePane" min="-2" pref="390" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace pref="57" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="alliancesStylesPane" min="-2" pref="65" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="raresStylesPane" min="-2" pref="95" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="dwarwenStylePane" min="-2" pref="239" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="glassStylePane" min="-2" pref="239" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="absouteStylePane" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="mercenaryStylePane" min="-2" pref="239" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="63" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="alliancesStylesPane">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="alliancesStylesTable">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="6" rowCount="3">
+                <Column editable="false" title="" type="java.lang.Object">
+                  <Data value="Motifs Artisanaux 1 : Les Altmers"/>
+                  <Data value="Motifs Artisanaux 2 : Les Elfes Noirs"/>
+                  <Data value="Motifs Artisanaux 3 : Les Elfes des Bois"/>
+                </Column>
+                <Column editable="true" title="" type="java.lang.Boolean"/>
+                <Column editable="false" title="" type="java.lang.Object">
+                  <Data value="Motifs Artisanaux 4 : Les Nordiques"/>
+                  <Data value="Motifs Artisanaux 5 : Les Br&#xe9;tons"/>
+                  <Data value="Motifs Artisanaux 6 : Les Rougegardes"/>
+                </Column>
+                <Column editable="true" title="" type="java.lang.Boolean"/>
+                <Column editable="false" title="" type="java.lang.Object">
+                  <Data value="Motifs Artisanaux 7 : Les Khajiits"/>
+                  <Data value="Motifs Artisanaux 8 : Les Orques"/>
+                  <Data value="Motifs Artisanaux 9 : Les Argoniens"/>
+                </Column>
+                <Column editable="true" title="" type="java.lang.Boolean"/>
+              </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="200" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="60" resizable="false">
+                  <Title noResource="true"/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="200" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="60" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="200" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="60" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="HubResearchClothingPanel_lightArmor"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JScrollPane" name="raresStylesPane">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="raresStylesTable">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="2" rowCount="5">
+                <Column editable="false" title="" type="java.lang.Object">
+                  <Data value="Motifs Artisanaux 10 : Les Imp&#xe9;riaux"/>
+                  <Data value="Motifs Artisanaux 11 : Les Elfes Antiques"/>
+                  <Data value="Motifs Artisanaux 12 : Les Barbares"/>
+                  <Data value="Motifs Artisanaux 13 : Les Primitifs"/>
+                  <Data value="Motifs Artisanaux 14 : Les Daedra"/>
+                </Column>
+                <Column editable="true" title="" type="java.lang.Boolean"/>
+              </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="350" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="60" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="HubResearchClothingPanel_mediumArmor"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JScrollPane" name="dwarwenStylePane">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="dwarwenStyleTable">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="2" rowCount="14">
+                <Column editable="false" title="" type="java.lang.Object">
+                  <Data value="Motifs Artisanaux 15, Ch. 1 : Les Haches Dwemers"/>
+                  <Data value="Motifs Artisanaux 15, Ch. 2 : Les Ceintures Dwemers"/>
+                  <Data value="Motifs Artisanaux 15, Ch. 3 : Les Bottes Dwemers"/>
+                  <Data value="Motifs Artisanaux 15, Ch. 4 : Les Arcs Dwemers"/>
+                  <Data value="Motifs Artisanaux 15, Ch. 5 : Les Plastrons Dwemers"/>
+                  <Data value="Motifs Artisanaux 15, Ch. 6 : Les Dagues Dwemers"/>
+                  <Data value="Motifs Artisanaux 15, Ch. 7 : Les Gants Dwemers"/>
+                  <Data value="Motifs Artisanaux 15, Ch. 8 : Les Casques Dwemers"/>
+                  <Data value="Motifs Artisanaux 15, Ch. 9 : Les Jambi&#xe8;res Dwemers"/>
+                  <Data value="Motifs Artisanaux 15, Ch. 10 : Les Masses Dwemers"/>
+                  <Data value="Motifs Artisanaux 15, Ch. 11 : Les Boucliers Dwemers"/>
+                  <Data value="Motifs Artisanaux 15, Ch. 12 : Les &#xc9;pauli&#xe8;res Dwemers"/>
+                  <Data value="Motifs Artisanaux 15, Ch. 13 : Les B&#xe2;tons Dwemers"/>
+                  <Data value="Motifs Artisanaux 15, Ch. 14 : Les &#xc9;p&#xe9;es Dwemers"/>
+                </Column>
+                <Column editable="true" title="" type="java.lang.Boolean"/>
+              </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="350" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="60" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="HubResearchClothingPanel_mediumArmor"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JScrollPane" name="glassStylePane">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="glassStyleTable">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="2" rowCount="14">
+                <Column editable="false" title="" type="java.lang.Object">
+                  <Data value="Motifs Artisanaux 16, Ch. 1 : Les Haches de Verre"/>
+                  <Data value="Motifs Artisanaux 16, Ch. 2 : Les Ceintures de Verre"/>
+                  <Data value="Motifs Artisanaux 16, Ch. 3 : Les Bottes de Verre"/>
+                  <Data value="Motifs Artisanaux 16, Ch. 4 : Les Arcs de Verre"/>
+                  <Data value="Motifs Artisanaux 16, Ch. 5 : Les Plastrons de Verre"/>
+                  <Data value="Motifs Artisanaux 16, Ch. 6 : Les Dagues de Verre"/>
+                  <Data value="Motifs Artisanaux 16, Ch. 7 : Les Gants de Verre"/>
+                  <Data value="Motifs Artisanaux 16, Ch. 8 : Les Casques de Verre"/>
+                  <Data value="Motifs Artisanaux 16, Ch. 9 : Les Jambi&#xe8;res de Verre"/>
+                  <Data value="Motifs Artisanaux 16, Ch. 10 : Les Masses de Verre"/>
+                  <Data value="Motifs Artisanaux 16, Ch. 11 : Les Boucliers de Verre"/>
+                  <Data value="Motifs Artisanaux 16, Ch. 12 : Les &#xc9;pauli&#xe8;res de Verre"/>
+                  <Data value="Motifs Artisanaux 16, Ch. 13 : Les B&#xe2;tons de Verre"/>
+                  <Data value="Motifs Artisanaux 16, Ch. 14 : Les &#xc9;p&#xe9;es de Verre"/>
+                </Column>
+                <Column editable="true" title="" type="java.lang.Boolean"/>
+              </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="350" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="60" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="HubResearchClothingPanel_mediumArmor"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JScrollPane" name="absouteStylePane">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="abstouteStyleTable">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="2" rowCount="1">
+                <Column editable="false" title="" type="java.lang.Object">
+                  <Data value="Motifs Artisanaux 29 : Les Absous"/>
+                </Column>
+                <Column editable="true" title="" type="java.lang.Boolean"/>
+              </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="350" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="60" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="HubResearchClothingPanel_mediumArmor"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JScrollPane" name="mercenaryStylePane">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="mercenaryStyleTable">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="2" rowCount="14">
+                <Column editable="false" title="" type="java.lang.Object">
+                  <Data value="Motifs Artisanaux 19, Ch. 1 : Les Haches de Mercenaire"/>
+                  <Data value="Motifs Artisanaux 19, Ch. 2 : Les Ceintures de Mercenaire"/>
+                  <Data value="Motifs Artisanaux 19, Ch. 3 : Les Bottes de Mercenaire"/>
+                  <Data value="Motifs Artisanaux 19, Ch. 4 : Les Arcs de Mercenaire"/>
+                  <Data value="Motifs Artisanaux 19, Ch. 5 : Les Plastrons de Mercenaire"/>
+                  <Data value="Motifs Artisanaux 19, Ch. 6 : Les Dagues de Mercenaire"/>
+                  <Data value="Motifs Artisanaux 19, Ch. 7 : Les Gants de Mercenaire"/>
+                  <Data value="Motifs Artisanaux 19, Ch. 8 : Les Casques de Mercenaire"/>
+                  <Data value="Motifs Artisanaux 19, Ch. 9 : Les Jambi&#xe8;res de Mercenaire"/>
+                  <Data value="Motifs Artisanaux 19, Ch. 10 : Les Masses de Mercenaire"/>
+                  <Data value="Motifs Artisanaux 19, Ch. 11 : Les Boucliers de Mercenaire"/>
+                  <Data value="Motifs Artisanaux 19, Ch. 12 : Les &#xc9;pauli&#xe8;res de Mercenaire"/>
+                  <Data value="Motifs Artisanaux 19, Ch. 13 : Les B&#xe2;tons de Mercenaire"/>
+                  <Data value="Motifs Artisanaux 19, Ch. 14 : Les &#xc9;p&#xe9;es de Mercenaire"/>
+                </Column>
+                <Column editable="true" title="" type="java.lang.Boolean"/>
+              </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="350" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="60" resizable="false">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="HubResearchClothingPanel_mediumArmor"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
