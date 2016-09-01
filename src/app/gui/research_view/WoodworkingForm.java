@@ -148,11 +148,6 @@ class WoodworkingForm extends javax.swing.JPanel
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    static void fireChanges()
-    {
-
-    }
-
     static WoodworkingForm getInstance()
     {
         WoodworkingForm instance = WoodworkingForm.INSTANCE;
@@ -168,6 +163,34 @@ class WoodworkingForm extends javax.swing.JPanel
             }
         }
         return instance;
+    }
+
+    static void importTables(ResearchViewData.woodworkingTableModel woodworkingTableModel)
+    {
+        java.util.Vector apparelData = woodworkingTableModel.getApparelTable();
+        for (int i = 0; i < apparelData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) apparelData.elementAt(i)).size(); ++j)
+            {
+                getInstance().apparelTable.setValueAt(((java.util.Vector) apparelData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+        java.util.Vector weaponData = woodworkingTableModel.getWeaponTable();
+        for (int i = 0; i < weaponData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) weaponData.elementAt(i)).size(); ++j)
+            {
+                getInstance().weaponTable.setValueAt(((java.util.Vector) weaponData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+    }
+
+    static ResearchViewData.woodworkingTableModel retrieveTables()
+    {
+        ResearchViewData.woodworkingTableModel tables = new ResearchViewData.woodworkingTableModel();
+        tables.setApparelTable(getInstance().apparelTable.getModel());
+        tables.setWeaponTable(getInstance().weaponTable.getModel());
+        return tables;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

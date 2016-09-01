@@ -156,11 +156,6 @@ class ClothingForm extends javax.swing.JPanel
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    static void fireChanges()
-    {
-
-    }
-
     static ClothingForm getInstance()
     {
         ClothingForm instance = ClothingForm.INSTANCE;
@@ -176,6 +171,34 @@ class ClothingForm extends javax.swing.JPanel
             }
         }
         return instance;
+    }
+
+    static void importTables(ResearchViewData.clothingTableModel clothingTableModel)
+    {
+        java.util.Vector lightArmorData = clothingTableModel.getLightArmorTable();
+        for (int i = 0; i < lightArmorData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) lightArmorData.elementAt(i)).size(); ++j)
+            {
+                getInstance().lightArmorTable.setValueAt(((java.util.Vector) lightArmorData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+        java.util.Vector mediumArmorData = clothingTableModel.getMediumArmorTable();
+        for (int i = 0; i < mediumArmorData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) mediumArmorData.elementAt(i)).size(); ++j)
+            {
+                getInstance().mediumArmorTable.setValueAt(((java.util.Vector) mediumArmorData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+    }
+
+    static ResearchViewData.clothingTableModel retrieveTables()
+    {
+        ResearchViewData.clothingTableModel tables = new ResearchViewData.clothingTableModel();
+        tables.setLightArmorTable(getInstance().lightArmorTable.getModel());
+        tables.setMediumArmorTable(getInstance().mediumArmorTable.getModel());
+        return tables;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -156,11 +156,6 @@ class BlacksmithingForm extends javax.swing.JPanel
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    static void fireChanges()
-    {
-
-    }
-
     static BlacksmithingForm getInstance()
     {
         BlacksmithingForm instance = BlacksmithingForm.INSTANCE;
@@ -176,6 +171,34 @@ class BlacksmithingForm extends javax.swing.JPanel
             }
         }
         return instance;
+    }
+
+    static void importTables(ResearchViewData.blacksmithingTableModel blacksmithingTableModel)
+    {
+        java.util.Vector heavyArmorData = blacksmithingTableModel.getHeavyArmorTable();
+        for (int i = 0; i < heavyArmorData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) heavyArmorData.elementAt(i)).size(); ++j)
+            {
+                getInstance().heavyArmorTable.setValueAt(((java.util.Vector) heavyArmorData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+        java.util.Vector weaponData = blacksmithingTableModel.getWeaponTable();
+        for (int i = 0; i < weaponData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) weaponData.elementAt(i)).size(); ++j)
+            {
+                getInstance().weaponTable.setValueAt(((java.util.Vector) weaponData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+    }
+
+    static ResearchViewData.blacksmithingTableModel retrieveTables()
+    {
+        ResearchViewData.blacksmithingTableModel tables = new ResearchViewData.blacksmithingTableModel();
+        tables.setHeavyArmorTable(getInstance().heavyArmorTable.getModel());
+        tables.setWeaponTable(getInstance().weaponTable.getModel());
+        return tables;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

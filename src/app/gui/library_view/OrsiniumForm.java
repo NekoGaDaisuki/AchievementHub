@@ -225,11 +225,6 @@ class OrsiniumForm extends javax.swing.JPanel
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    static void fireChanges()
-    {
-
-    }
-
     static OrsiniumForm getInstance()
     {
         OrsiniumForm instance = OrsiniumForm.INSTANCE;
@@ -245,6 +240,43 @@ class OrsiniumForm extends javax.swing.JPanel
             }
         }
         return instance;
+    }
+
+    static void importTables(LibraryViewData.orsiniumTableModel orsiniumTableModel)
+    {
+        java.util.Vector ancientsOrcsData = orsiniumTableModel.getAncientsOrcsTable();
+        for (int i = 0; i < ancientsOrcsData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) ancientsOrcsData.elementAt(i)).size(); ++j)
+            {
+                getInstance().ancientsOrcsStyleTable.setValueAt(((java.util.Vector) ancientsOrcsData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+        java.util.Vector malacathData = orsiniumTableModel.getMalacathTable();
+        for (int i = 0; i < malacathData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) malacathData.elementAt(i)).size(); ++j)
+            {
+                getInstance().malacathStyleTable.setValueAt(((java.util.Vector) malacathData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+        java.util.Vector trinimacData = orsiniumTableModel.getTrinimacTable();
+        for (int i = 0; i < trinimacData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) trinimacData.elementAt(i)).size(); ++j)
+            {
+                getInstance().trinimacStyleTable.setValueAt(((java.util.Vector) trinimacData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+    }
+
+    static LibraryViewData.orsiniumTableModel retrieveTables()
+    {
+        LibraryViewData.orsiniumTableModel tables = new LibraryViewData.orsiniumTableModel();
+        tables.setAncientsOrcsTable(getInstance().ancientsOrcsStyleTable.getModel());
+        tables.setMalacathTable(getInstance().malacathStyleTable.getModel());
+        tables.setTrinimacTable(getInstance().trinimacStyleTable.getModel());
+        return tables;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

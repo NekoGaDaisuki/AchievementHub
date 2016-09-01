@@ -288,11 +288,6 @@ class ThievesGuildForm extends javax.swing.JPanel
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    static void fireChanges()
-    {
-
-    }
-
     static ThievesGuildForm getInstance()
     {
         ThievesGuildForm instance = ThievesGuildForm.INSTANCE;
@@ -308,6 +303,52 @@ class ThievesGuildForm extends javax.swing.JPanel
             }
         }
         return instance;
+    }
+
+    static void importTables(LibraryViewData.thievesGuildTableModel thievesGuildTableModel)
+    {
+        java.util.Vector abahWatchData = thievesGuildTableModel.getAbahWatchTable();
+        for (int i = 0; i < abahWatchData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) abahWatchData.elementAt(i)).size(); ++j)
+            {
+                getInstance().abahWatchStyleTable.setValueAt(((java.util.Vector) abahWatchData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+        java.util.Vector dromAthraData = thievesGuildTableModel.getDromAthraTable();
+        for (int i = 0; i < dromAthraData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) dromAthraData.elementAt(i)).size(); ++j)
+            {
+                getInstance().dromAthraStyleTable.setValueAt(((java.util.Vector) dromAthraData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+        java.util.Vector outlawData = thievesGuildTableModel.getOutlawTable();
+        for (int i = 0; i < outlawData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) outlawData.elementAt(i)).size(); ++j)
+            {
+                getInstance().outlawStyleTable.setValueAt(((java.util.Vector) outlawData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+        java.util.Vector thievesGuildData = thievesGuildTableModel.getThievesGuildTable();
+        for (int i = 0; i < thievesGuildData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) thievesGuildData.elementAt(i)).size(); ++j)
+            {
+                getInstance().thievesGuildStyleTable.setValueAt(((java.util.Vector) thievesGuildData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+    }
+
+    static LibraryViewData.thievesGuildTableModel retrieveTables()
+    {
+        LibraryViewData.thievesGuildTableModel tables = new LibraryViewData.thievesGuildTableModel();
+        tables.setAbahWatchTable(getInstance().abahWatchStyleTable.getModel());
+        tables.setDromAthraTable(getInstance().dromAthraStyleTable.getModel());
+        tables.setOutlawTable(getInstance().outlawStyleTable.getModel());
+        tables.setThievesGuildTable(getInstance().thievesGuildStyleTable.getModel());
+        return tables;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

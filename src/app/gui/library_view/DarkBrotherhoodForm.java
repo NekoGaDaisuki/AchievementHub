@@ -283,11 +283,6 @@ class DarkBrotherhoodForm extends javax.swing.JPanel
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    static void fireChanges()
-    {
-
-    }
-
     static DarkBrotherhoodForm getInstance()
     {
         DarkBrotherhoodForm instance = DarkBrotherhoodForm.INSTANCE;
@@ -303,6 +298,52 @@ class DarkBrotherhoodForm extends javax.swing.JPanel
             }
         }
         return instance;
+    }
+
+    static void importTables(LibraryViewData.darkBrotherhoodTableModel darkBrotherhoodTableModel)
+    {
+        java.util.Vector assassinsLeagueData = darkBrotherhoodTableModel.getAssassinsLeagueTable();
+        for (int i = 0; i < assassinsLeagueData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) assassinsLeagueData.elementAt(i)).size(); ++j)
+            {
+                getInstance().assassinsLeagueStyleTable.setValueAt(((java.util.Vector) assassinsLeagueData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+        java.util.Vector darkBrotherhoodData = darkBrotherhoodTableModel.getDarkBrotherhoodTable();
+        for (int i = 0; i < darkBrotherhoodData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) darkBrotherhoodData.elementAt(i)).size(); ++j)
+            {
+                getInstance().darkBrotherhoodStyleTable.setValueAt(((java.util.Vector) darkBrotherhoodData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+        java.util.Vector minotaurData = darkBrotherhoodTableModel.getMinotaurTable();
+        for (int i = 0; i < minotaurData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) minotaurData.elementAt(i)).size(); ++j)
+            {
+                getInstance().minotaurStyleTable.setValueAt(((java.util.Vector) minotaurData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+        java.util.Vector orderHourData = darkBrotherhoodTableModel.getOrderHourTable();
+        for (int i = 0; i < orderHourData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) orderHourData.elementAt(i)).size(); ++j)
+            {
+                getInstance().orderHourStyleTable.setValueAt(((java.util.Vector) orderHourData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+    }
+
+    static LibraryViewData.darkBrotherhoodTableModel retrieveTables()
+    {
+        LibraryViewData.darkBrotherhoodTableModel tables = new LibraryViewData.darkBrotherhoodTableModel();
+        tables.setAssassinsLeagueTable(getInstance().assassinsLeagueStyleTable.getModel());
+        tables.setDarkBrotherhoodTable(getInstance().darkBrotherhoodStyleTable.getModel());
+        tables.setMinotaurTable(getInstance().minotaurStyleTable.getModel());
+        tables.setOrderHourTable(getInstance().orderHourStyleTable.getModel());
+        return tables;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

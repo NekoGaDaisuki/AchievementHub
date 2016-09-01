@@ -39,7 +39,7 @@ class BasegameForm extends javax.swing.JPanel
         glassStylePane = new javax.swing.JScrollPane();
         glassStyleTable = new javax.swing.JTable();
         absouteStylePane = new javax.swing.JScrollPane();
-        abstouteStyleTable = new javax.swing.JTable();
+        absouteStyleTable = new javax.swing.JTable();
         mercenaryStylePane = new javax.swing.JScrollPane();
         mercenaryStyleTable = new javax.swing.JTable();
 
@@ -245,7 +245,7 @@ class BasegameForm extends javax.swing.JPanel
             glassStyleTable.getColumnModel().getColumn(1).setPreferredWidth(60);
         }
 
-        abstouteStyleTable.setModel(new javax.swing.table.DefaultTableModel(
+        absouteStyleTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
                 {"Motifs Artisanaux 29 : Les Absous", null}
@@ -275,14 +275,14 @@ class BasegameForm extends javax.swing.JPanel
                 return canEdit [columnIndex];
             }
         });
-        abstouteStyleTable.getTableHeader().setReorderingAllowed(false);
-        absouteStylePane.setViewportView(abstouteStyleTable);
-        if (abstouteStyleTable.getColumnModel().getColumnCount() > 0)
+        absouteStyleTable.getTableHeader().setReorderingAllowed(false);
+        absouteStylePane.setViewportView(absouteStyleTable);
+        if (absouteStyleTable.getColumnModel().getColumnCount() > 0)
         {
-            abstouteStyleTable.getColumnModel().getColumn(0).setResizable(false);
-            abstouteStyleTable.getColumnModel().getColumn(0).setPreferredWidth(350);
-            abstouteStyleTable.getColumnModel().getColumn(1).setResizable(false);
-            abstouteStyleTable.getColumnModel().getColumn(1).setPreferredWidth(60);
+            absouteStyleTable.getColumnModel().getColumn(0).setResizable(false);
+            absouteStyleTable.getColumnModel().getColumn(0).setPreferredWidth(350);
+            absouteStyleTable.getColumnModel().getColumn(1).setResizable(false);
+            absouteStyleTable.getColumnModel().getColumn(1).setPreferredWidth(60);
         }
 
         mercenaryStyleTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -377,11 +377,6 @@ class BasegameForm extends javax.swing.JPanel
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    static void fireChanges()
-    {
-
-    }
-
     static BasegameForm getInstance()
     {
         BasegameForm instance = BasegameForm.INSTANCE;
@@ -399,9 +394,73 @@ class BasegameForm extends javax.swing.JPanel
         return instance;
     }
 
+    static void importTables(LibraryViewData.basegameTableModel basegameTableModel)
+    {
+        java.util.Vector absouteData = basegameTableModel.getAbsouteTable();
+        for (int i = 0; i < absouteData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) absouteData.elementAt(i)).size(); ++j)
+            {
+                getInstance().absouteStyleTable.setValueAt(((java.util.Vector) absouteData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+        java.util.Vector alliancesData = basegameTableModel.getAlliancesTable();
+        for (int i = 0; i < alliancesData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) alliancesData.elementAt(i)).size(); ++j)
+            {
+                getInstance().alliancesStylesTable.setValueAt(((java.util.Vector) alliancesData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+        java.util.Vector dwarwenData = basegameTableModel.getDwarwenTable();
+        for (int i = 0; i < dwarwenData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) dwarwenData.elementAt(i)).size(); ++j)
+            {
+                getInstance().dwarwenStyleTable.setValueAt(((java.util.Vector) dwarwenData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+        java.util.Vector glassData = basegameTableModel.getGlassTable();
+        for (int i = 0; i < glassData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) glassData.elementAt(i)).size(); ++j)
+            {
+                getInstance().glassStyleTable.setValueAt(((java.util.Vector) glassData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+        java.util.Vector mercenaryData = basegameTableModel.getMercenaryTable();
+        for (int i = 0; i < mercenaryData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) mercenaryData.elementAt(i)).size(); ++j)
+            {
+                getInstance().mercenaryStyleTable.setValueAt(((java.util.Vector) mercenaryData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+        java.util.Vector raresStylesData = basegameTableModel.getRaresStylesTable();
+        for (int i = 0; i < raresStylesData.size(); ++i)
+        {
+            for (int j = 1; j < ((java.util.Vector) raresStylesData.elementAt(i)).size(); ++j)
+            {
+                getInstance().raresStylesTable.setValueAt(((java.util.Vector) raresStylesData.elementAt(i)).elementAt(j), i, j);
+            }
+        }
+    }
+
+    static LibraryViewData.basegameTableModel retrieveTables()
+    {
+        LibraryViewData.basegameTableModel tables = new LibraryViewData.basegameTableModel();
+        tables.setAbsouteTable(getInstance().absouteStyleTable.getModel());
+        tables.setAlliancesTable(getInstance().alliancesStylesTable.getModel());
+        tables.setDwarwenTable(getInstance().dwarwenStyleTable.getModel());
+        tables.setGlassTable(getInstance().glassStyleTable.getModel());
+        tables.setMercenaryTable(getInstance().mercenaryStyleTable.getModel());
+        tables.setRaresStylesTable(getInstance().raresStylesTable.getModel());
+        return tables;
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane absouteStylePane;
-    private javax.swing.JTable abstouteStyleTable;
+    private javax.swing.JTable absouteStyleTable;
     private javax.swing.JScrollPane alliancesStylesPane;
     private javax.swing.JTable alliancesStylesTable;
     private javax.swing.JScrollPane dwarwenStylePane;
