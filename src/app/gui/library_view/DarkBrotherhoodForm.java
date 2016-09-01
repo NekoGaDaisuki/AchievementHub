@@ -283,9 +283,26 @@ class DarkBrotherhoodForm extends javax.swing.JPanel
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    static void fireChanges()
+    {
+
+    }
+
     static DarkBrotherhoodForm getInstance()
     {
-        return INSTANCE;
+        DarkBrotherhoodForm instance = DarkBrotherhoodForm.INSTANCE;
+        if (instance == null)
+        {
+            synchronized (DarkBrotherhoodForm.class)
+            {
+                instance = DarkBrotherhoodForm.INSTANCE;
+                if (instance == null)
+                {
+                    DarkBrotherhoodForm.INSTANCE = instance = new DarkBrotherhoodForm();
+                }
+            }
+        }
+        return instance;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -299,5 +316,5 @@ class DarkBrotherhoodForm extends javax.swing.JPanel
     private javax.swing.JTable orderHourStyleTable;
     // End of variables declaration//GEN-END:variables
 
-    private static final DarkBrotherhoodForm INSTANCE = new DarkBrotherhoodForm();
+    private static volatile DarkBrotherhoodForm INSTANCE;
 }

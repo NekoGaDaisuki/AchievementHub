@@ -26,10 +26,22 @@ public class ResearchViewPanel extends javax.swing.JPanel
      */
     public static ResearchViewPanel getInstance()
     {
-        return INSTANCE;
+        ResearchViewPanel instance = ResearchViewPanel.INSTANCE;
+        if (instance == null)
+        {
+            synchronized (ResearchViewPanel.class)
+            {
+                instance = ResearchViewPanel.INSTANCE;
+                if (instance == null)
+                {
+                    ResearchViewPanel.INSTANCE = instance = new ResearchViewPanel();
+                }
+            }
+        }
+        return instance;
     }
 
     private final ResearchViewTab researchTab;
 
-    private static final ResearchViewPanel INSTANCE = new ResearchViewPanel();
+    private static volatile ResearchViewPanel INSTANCE;
 }

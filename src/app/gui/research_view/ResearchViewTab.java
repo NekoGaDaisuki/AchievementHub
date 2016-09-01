@@ -26,12 +26,24 @@ class ResearchViewTab extends javax.swing.JTabbedPane
 
     static ResearchViewTab getInstance()
     {
-        return INSTANCE;
+        ResearchViewTab instance = ResearchViewTab.INSTANCE;
+        if (instance == null)
+        {
+            synchronized (ResearchViewTab.class)
+            {
+                instance = ResearchViewTab.INSTANCE;
+                if (instance == null)
+                {
+                    ResearchViewTab.INSTANCE = instance = new ResearchViewTab();
+                }
+            }
+        }
+        return instance;
     }
 
     private final ClothingForm clothingPanel;
     private final BlacksmithingForm blacksmithingPanel;
     private final WoodworkingForm woodworkingPanel;
 
-    private static final ResearchViewTab INSTANCE = new ResearchViewTab();
+    private static volatile ResearchViewTab INSTANCE;
 }

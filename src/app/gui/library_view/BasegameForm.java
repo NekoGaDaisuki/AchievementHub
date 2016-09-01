@@ -12,8 +12,6 @@ package app.gui.library_view;
 class BasegameForm extends javax.swing.JPanel
 {
 
-    private static final long serialVersionUID = -3508980491448576794L;
-
     /**
      * Creates new form BasegameForm
      */
@@ -379,9 +377,26 @@ class BasegameForm extends javax.swing.JPanel
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    static void fireChanges()
+    {
+
+    }
+
     static BasegameForm getInstance()
     {
-        return INSTANCE;
+        BasegameForm instance = BasegameForm.INSTANCE;
+        if (instance == null)
+        {
+            synchronized (BasegameForm.class)
+            {
+                instance = BasegameForm.INSTANCE;
+                if (instance == null)
+                {
+                    BasegameForm.INSTANCE = instance = new BasegameForm();
+                }
+            }
+        }
+        return instance;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -399,5 +414,5 @@ class BasegameForm extends javax.swing.JPanel
     private javax.swing.JTable raresStylesTable;
     // End of variables declaration//GEN-END:variables
 
-    private static final BasegameForm INSTANCE = new BasegameForm();
+    private static volatile BasegameForm INSTANCE;
 }

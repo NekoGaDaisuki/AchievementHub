@@ -225,9 +225,26 @@ class OrsiniumForm extends javax.swing.JPanel
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    static void fireChanges()
+    {
+
+    }
+
     static OrsiniumForm getInstance()
     {
-        return INSTANCE;
+        OrsiniumForm instance = OrsiniumForm.INSTANCE;
+        if (instance == null)
+        {
+            synchronized (OrsiniumForm.class)
+            {
+                instance = OrsiniumForm.INSTANCE;
+                if (instance == null)
+                {
+                    OrsiniumForm.INSTANCE = instance = new OrsiniumForm();
+                }
+            }
+        }
+        return instance;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -239,5 +256,5 @@ class OrsiniumForm extends javax.swing.JPanel
     private javax.swing.JTable trinimacStyleTable;
     // End of variables declaration//GEN-END:variables
 
-    private static final OrsiniumForm INSTANCE = new OrsiniumForm();
+    private static volatile OrsiniumForm INSTANCE;
 }

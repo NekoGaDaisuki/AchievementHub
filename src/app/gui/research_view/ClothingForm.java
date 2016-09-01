@@ -156,9 +156,26 @@ class ClothingForm extends javax.swing.JPanel
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    static void fireChanges()
+    {
+
+    }
+
     static ClothingForm getInstance()
     {
-        return INSTANCE;
+        ClothingForm instance = ClothingForm.INSTANCE;
+        if (instance == null)
+        {
+            synchronized (ClothingForm.class)
+            {
+                instance = ClothingForm.INSTANCE;
+                if (instance == null)
+                {
+                    ClothingForm.INSTANCE = instance = new ClothingForm();
+                }
+            }
+        }
+        return instance;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -168,5 +185,5 @@ class ClothingForm extends javax.swing.JPanel
     private javax.swing.JTable mediumArmorTable;
     // End of variables declaration//GEN-END:variables
 
-    private static final ClothingForm INSTANCE = new ClothingForm();
+    private static volatile ClothingForm INSTANCE;
 }

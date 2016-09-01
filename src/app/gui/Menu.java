@@ -21,10 +21,22 @@ class Menu extends javax.swing.JMenuBar
 
     static Menu getInstance()
     {
-        return INSTANCE;
+        Menu instance = Menu.INSTANCE;
+        if (instance == null)
+        {
+            synchronized (Menu.class)
+            {
+                instance = Menu.INSTANCE;
+                if (instance == null)
+                {
+                    Menu.INSTANCE = instance = new Menu();
+                }
+            }
+        }
+        return instance;
     }
 
-    final javax.swing.JMenu fileMenu;
-    public javax.swing.JMenuItem openItem;
-    private static final Menu INSTANCE = new Menu();
+    private final javax.swing.JMenu fileMenu;
+
+    private static volatile Menu INSTANCE;
 }

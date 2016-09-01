@@ -30,7 +30,19 @@ class LibraryViewTab extends javax.swing.JTabbedPane
 
     static LibraryViewTab getInstance()
     {
-        return INSTANCE;
+        LibraryViewTab instance = LibraryViewTab.INSTANCE;
+        if (instance == null)
+        {
+            synchronized (LibraryViewTab.class)
+            {
+                instance = LibraryViewTab.INSTANCE;
+                if (instance == null)
+                {
+                    LibraryViewTab.INSTANCE = instance = new LibraryViewTab();
+                }
+            }
+        }
+        return instance;
     }
 
     private final BasegameForm baseGamePanel;
@@ -39,5 +51,5 @@ class LibraryViewTab extends javax.swing.JTabbedPane
     private final ThievesGuildForm thievesGuildPanel;
     private final DarkBrotherhoodForm darkBrotherhoodPanel;
 
-    private static final LibraryViewTab INSTANCE = new LibraryViewTab();
+    private static volatile LibraryViewTab INSTANCE;
 }

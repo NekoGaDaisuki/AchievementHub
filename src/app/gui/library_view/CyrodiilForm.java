@@ -343,9 +343,26 @@ class CyrodiilForm extends javax.swing.JPanel
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    static void fireChanges()
+    {
+
+    }
+
     static CyrodiilForm getInstance()
     {
-        return INSTANCE;
+        CyrodiilForm instance = CyrodiilForm.INSTANCE;
+        if (instance == null)
+        {
+            synchronized (CyrodiilForm.class)
+            {
+                instance = CyrodiilForm.INSTANCE;
+                if (instance == null)
+                {
+                    CyrodiilForm.INSTANCE = instance = new CyrodiilForm();
+                }
+            }
+        }
+        return instance;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -361,5 +378,5 @@ class CyrodiilForm extends javax.swing.JPanel
     private javax.swing.JTable xivkynStyleTable;
     // End of variables declaration//GEN-END:variables
 
-    private static final CyrodiilForm INSTANCE = new CyrodiilForm();
+    private static volatile CyrodiilForm INSTANCE;
 }

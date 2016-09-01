@@ -156,9 +156,26 @@ class BlacksmithingForm extends javax.swing.JPanel
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    static void fireChanges()
+    {
+
+    }
+
     static BlacksmithingForm getInstance()
     {
-        return INSTANCE;
+        BlacksmithingForm instance = BlacksmithingForm.INSTANCE;
+        if (instance == null)
+        {
+            synchronized (BlacksmithingForm.class)
+            {
+                instance = BlacksmithingForm.INSTANCE;
+                if (instance == null)
+                {
+                    BlacksmithingForm.INSTANCE = instance = new BlacksmithingForm();
+                }
+            }
+        }
+        return instance;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -168,5 +185,5 @@ class BlacksmithingForm extends javax.swing.JPanel
     private javax.swing.JTable weaponTable;
     // End of variables declaration//GEN-END:variables
 
-    private static final BlacksmithingForm INSTANCE = new BlacksmithingForm();
+    private static volatile BlacksmithingForm INSTANCE;
 }

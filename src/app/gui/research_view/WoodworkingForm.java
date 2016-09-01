@@ -148,9 +148,26 @@ class WoodworkingForm extends javax.swing.JPanel
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    static void fireChanges()
+    {
+
+    }
+
     static WoodworkingForm getInstance()
     {
-        return INSTANCE;
+        WoodworkingForm instance = WoodworkingForm.INSTANCE;
+        if (instance == null)
+        {
+            synchronized (WoodworkingForm.class)
+            {
+                instance = WoodworkingForm.INSTANCE;
+                if (instance == null)
+                {
+                    WoodworkingForm.INSTANCE = instance = new WoodworkingForm();
+                }
+            }
+        }
+        return instance;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -160,5 +177,5 @@ class WoodworkingForm extends javax.swing.JPanel
     private javax.swing.JTable weaponTable;
     // End of variables declaration//GEN-END:variables
 
-    private static final WoodworkingForm INSTANCE = new WoodworkingForm();
+    private static volatile WoodworkingForm INSTANCE;
 }

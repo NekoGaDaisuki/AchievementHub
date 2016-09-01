@@ -29,7 +29,19 @@ class FileMenu extends javax.swing.JMenu
 
     static FileMenu getInstance()
     {
-        return INSTANCE;
+        FileMenu instance = FileMenu.INSTANCE;
+        if (instance == null)
+        {
+            synchronized (FileMenu.class)
+            {
+                instance = FileMenu.INSTANCE;
+                if (instance == null)
+                {
+                    FileMenu.INSTANCE = instance = new FileMenu();
+                }
+            }
+        }
+        return instance;
     }
 
     // <editor-fold defaultstate="collapsed" desc="exitApp Class Code">
@@ -144,5 +156,5 @@ class FileMenu extends javax.swing.JMenu
     private final javax.swing.JMenuItem openItem;
     private final javax.swing.JMenuItem saveItem;
 
-    private static final FileMenu INSTANCE = new FileMenu();
+    private static volatile FileMenu INSTANCE;
 }

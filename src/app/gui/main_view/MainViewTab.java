@@ -20,8 +20,20 @@ class MainViewTab extends javax.swing.JTabbedPane
 
     static MainViewTab getInstance()
     {
-        return INSTANCE;
+        MainViewTab instance = MainViewTab.INSTANCE;
+        if (instance == null)
+        {
+            synchronized (MainViewTab.class)
+            {
+                instance = MainViewTab.INSTANCE;
+                if (instance == null)
+                {
+                    MainViewTab.INSTANCE = instance = new MainViewTab();
+                }
+            }
+        }
+        return instance;
     }
 
-    private static final MainViewTab INSTANCE = new MainViewTab();
+    private static volatile MainViewTab INSTANCE;
 }

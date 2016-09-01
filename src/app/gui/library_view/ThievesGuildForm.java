@@ -288,9 +288,26 @@ class ThievesGuildForm extends javax.swing.JPanel
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    static void fireChanges()
+    {
+
+    }
+
     static ThievesGuildForm getInstance()
     {
-        return INSTANCE;
+        ThievesGuildForm instance = ThievesGuildForm.INSTANCE;
+        if (instance == null)
+        {
+            synchronized (ThievesGuildForm.class)
+            {
+                instance = ThievesGuildForm.INSTANCE;
+                if (instance == null)
+                {
+                    ThievesGuildForm.INSTANCE = instance = new ThievesGuildForm();
+                }
+            }
+        }
+        return instance;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -304,5 +321,5 @@ class ThievesGuildForm extends javax.swing.JPanel
     private javax.swing.JTable thievesGuildStyleTable;
     // End of variables declaration//GEN-END:variables
 
-    private static final ThievesGuildForm INSTANCE = new ThievesGuildForm();
+    private static volatile ThievesGuildForm INSTANCE;
 }

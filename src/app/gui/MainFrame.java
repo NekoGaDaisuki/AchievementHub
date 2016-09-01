@@ -24,8 +24,20 @@ public class MainFrame extends javax.swing.JFrame
 
     public static MainFrame getInstance()
     {
-        return INSTANCE;
+        MainFrame instance = MainFrame.INSTANCE;
+        if (instance == null)
+        {
+            synchronized (MainFrame.class)
+            {
+                instance = MainFrame.INSTANCE;
+                if (instance == null)
+                {
+                    MainFrame.INSTANCE = instance = new MainFrame();
+                }
+            }
+        }
+        return instance;
     }
 
-    private static final MainFrame INSTANCE = new MainFrame();
+    private static volatile MainFrame INSTANCE;
 }

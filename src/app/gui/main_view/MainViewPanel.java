@@ -26,10 +26,22 @@ public class MainViewPanel extends javax.swing.JPanel
      */
     public static MainViewPanel getInstance()
     {
-        return INSTANCE;
+        MainViewPanel instance = MainViewPanel.INSTANCE;
+        if (instance == null)
+        {
+            synchronized (MainViewPanel.class)
+            {
+                instance = MainViewPanel.INSTANCE;
+                if (instance == null)
+                {
+                    MainViewPanel.INSTANCE = instance = new MainViewPanel();
+                }
+            }
+        }
+        return instance;
     }
 
     private final MainViewTab generalTab;
 
-    private static final MainViewPanel INSTANCE = new MainViewPanel();
+    private static volatile MainViewPanel INSTANCE;
 }

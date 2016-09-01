@@ -26,10 +26,22 @@ public class LibraryViewPanel extends javax.swing.JPanel
      */
     public static LibraryViewPanel getInstance()
     {
-        return INSTANCE;
+        LibraryViewPanel instance = LibraryViewPanel.INSTANCE;
+        if (instance == null)
+        {
+            synchronized (LibraryViewPanel.class)
+            {
+                instance = LibraryViewPanel.INSTANCE;
+                if (instance == null)
+                {
+                    LibraryViewPanel.INSTANCE = instance = new LibraryViewPanel();
+                }
+            }
+        }
+        return instance;
     }
 
     private final LibraryViewTab libraryTab;
 
-    private static final LibraryViewPanel INSTANCE = new LibraryViewPanel();
+    private static volatile LibraryViewPanel INSTANCE;
 }
