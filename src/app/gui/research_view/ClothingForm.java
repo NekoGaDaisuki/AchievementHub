@@ -80,13 +80,21 @@ class ClothingForm extends javax.swing.JPanel
         if (lightArmorTable.getColumnModel().getColumnCount() > 0)
         {
             lightArmorTable.getColumnModel().getColumn(0).setResizable(false);
+            lightArmorTable.getColumnModel().getColumn(0).setPreferredWidth(150);
             lightArmorTable.getColumnModel().getColumn(1).setResizable(false);
+            lightArmorTable.getColumnModel().getColumn(1).setPreferredWidth(100);
             lightArmorTable.getColumnModel().getColumn(2).setResizable(false);
+            lightArmorTable.getColumnModel().getColumn(2).setPreferredWidth(100);
             lightArmorTable.getColumnModel().getColumn(3).setResizable(false);
+            lightArmorTable.getColumnModel().getColumn(3).setPreferredWidth(100);
             lightArmorTable.getColumnModel().getColumn(4).setResizable(false);
+            lightArmorTable.getColumnModel().getColumn(4).setPreferredWidth(100);
             lightArmorTable.getColumnModel().getColumn(5).setResizable(false);
+            lightArmorTable.getColumnModel().getColumn(5).setPreferredWidth(100);
             lightArmorTable.getColumnModel().getColumn(6).setResizable(false);
+            lightArmorTable.getColumnModel().getColumn(6).setPreferredWidth(100);
             lightArmorTable.getColumnModel().getColumn(7).setResizable(false);
+            lightArmorTable.getColumnModel().getColumn(7).setPreferredWidth(100);
         }
 
         mediumArmorTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -131,28 +139,40 @@ class ClothingForm extends javax.swing.JPanel
         if (mediumArmorTable.getColumnModel().getColumnCount() > 0)
         {
             mediumArmorTable.getColumnModel().getColumn(0).setResizable(false);
+            mediumArmorTable.getColumnModel().getColumn(0).setPreferredWidth(150);
             mediumArmorTable.getColumnModel().getColumn(1).setResizable(false);
+            mediumArmorTable.getColumnModel().getColumn(1).setPreferredWidth(100);
             mediumArmorTable.getColumnModel().getColumn(2).setResizable(false);
+            mediumArmorTable.getColumnModel().getColumn(2).setPreferredWidth(100);
             mediumArmorTable.getColumnModel().getColumn(3).setResizable(false);
+            mediumArmorTable.getColumnModel().getColumn(3).setPreferredWidth(100);
             mediumArmorTable.getColumnModel().getColumn(4).setResizable(false);
+            mediumArmorTable.getColumnModel().getColumn(4).setPreferredWidth(100);
             mediumArmorTable.getColumnModel().getColumn(5).setResizable(false);
+            mediumArmorTable.getColumnModel().getColumn(5).setPreferredWidth(100);
             mediumArmorTable.getColumnModel().getColumn(6).setResizable(false);
+            mediumArmorTable.getColumnModel().getColumn(6).setPreferredWidth(100);
             mediumArmorTable.getColumnModel().getColumn(7).setResizable(false);
+            mediumArmorTable.getColumnModel().getColumn(7).setPreferredWidth(100);
         }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lightArmorPane, javax.swing.GroupLayout.DEFAULT_SIZE, 917, Short.MAX_VALUE)
-            .addComponent(mediumArmorPane)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(mediumArmorPane, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 945, Short.MAX_VALUE)
+                    .addComponent(lightArmorPane, javax.swing.GroupLayout.Alignment.LEADING))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(lightArmorPane, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
-                .addComponent(mediumArmorPane, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(mediumArmorPane, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -173,6 +193,7 @@ class ClothingForm extends javax.swing.JPanel
         return instance;
     }
 
+    // <editor-fold defaultstate="collapsed" desc="importTables Code">
     static void importTables(ResearchViewData.clothingTableModel clothingTableModel)
     {
         java.util.Vector lightArmorData = clothingTableModel.getLightArmorTable();
@@ -191,15 +212,16 @@ class ClothingForm extends javax.swing.JPanel
                 getInstance().mediumArmorTable.setValueAt(((java.util.Vector) mediumArmorData.elementAt(i)).elementAt(j), i, j);
             }
         }
-    }
+    }// </editor-fold>
 
+    // <editor-fold defaultstate="collapsed" desc="retrieveTables Code">
     static ResearchViewData.clothingTableModel retrieveTables()
     {
         ResearchViewData.clothingTableModel tables = new ResearchViewData.clothingTableModel();
         tables.setLightArmorTable(getInstance().lightArmorTable.getModel());
         tables.setMediumArmorTable(getInstance().mediumArmorTable.getModel());
         return tables;
-    }
+    }// </editor-fold>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane lightArmorPane;

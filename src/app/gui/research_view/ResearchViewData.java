@@ -29,7 +29,7 @@ public abstract class ResearchViewData
         os.writeObject(WoodworkingForm.retrieveTables());
     }
 
-    // <editor-fold defaultstate="collapsed" desc="blacksmithingTableModel source code">
+    // <editor-fold defaultstate="collapsed" desc="blacksmithingTableModel Code">
     static class blacksmithingTableModel implements java.io.Serializable
     {
 
@@ -78,7 +78,7 @@ public abstract class ResearchViewData
 
     }// </editor-fold>
 
-    // <editor-fold defaultstate="collapsed" desc="clothingTableModel source code">
+    // <editor-fold defaultstate="collapsed" desc="clothingTableModel Code">
     static class clothingTableModel implements java.io.Serializable
     {
 
@@ -126,7 +126,7 @@ public abstract class ResearchViewData
 
     }// </editor-fold>
 
-    // <editor-fold defaultstate="collapsed" desc="woodworkingTableModel source code">
+    // <editor-fold defaultstate="collapsed" desc="woodworkingTableModel Code">
     static class woodworkingTableModel implements java.io.Serializable
     {
 

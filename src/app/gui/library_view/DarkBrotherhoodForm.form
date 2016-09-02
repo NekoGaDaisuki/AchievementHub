@@ -24,15 +24,15 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="assassinsLeagueStylePane" min="-2" pref="535" max="-2" attributes="0"/>
                   <Component id="minotaurStylePane" min="-2" pref="425" max="-2" attributes="0"/>
+                  <Component id="assassinsLeagueStylePane" min="-2" pref="533" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="darkBrotherhoodStylePane" pref="500" max="32767" attributes="0"/>
-                  <Component id="orderHourStylePane" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="darkBrotherhoodStylePane" min="-2" pref="492" max="-2" attributes="0"/>
+                  <Component id="orderHourStylePane" min="-2" pref="492" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -49,7 +49,7 @@
                   <Component id="orderHourStylePane" min="-2" pref="239" max="-2" attributes="0"/>
                   <Component id="minotaurStylePane" alignment="0" min="-2" pref="239" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="265" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

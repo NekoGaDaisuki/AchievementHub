@@ -44,7 +44,7 @@ class ThievesGuildForm extends javax.swing.JPanel
         outlawStyleTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
-                {"Motifs Artisanaux 24, Ch. 1 : Les Haches de Hors-la-loi", null},
+                {"Motifs Artisanaux 24, Ch. 1 : Les Haches de Hors-la-loi",  new Boolean(false)},
                 {"Motifs Artisanaux 24, Ch. 2 : Les Ceintures de Hors-la-loi", null},
                 {"Motifs Artisanaux 24, Ch. 3 : Les Bottes de Hors-la-loi", null},
                 {"Motifs Artisanaux 24, Ch. 4 : Les Arcs de Hors-la-loi", null},
@@ -250,7 +250,7 @@ class ThievesGuildForm extends javax.swing.JPanel
             thievesGuildStyleTable.getColumnModel().getColumn(0).setResizable(false);
             thievesGuildStyleTable.getColumnModel().getColumn(0).setPreferredWidth(350);
             thievesGuildStyleTable.getColumnModel().getColumn(1).setResizable(false);
-            thievesGuildStyleTable.getColumnModel().getColumn(1).setPreferredWidth(40);
+            thievesGuildStyleTable.getColumnModel().getColumn(1).setPreferredWidth(60);
         }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -260,18 +260,13 @@ class ThievesGuildForm extends javax.swing.JPanel
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(outlawStylePane, javax.swing.GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)
-                        .addGap(80, 80, 80))
-                    .addComponent(thievesGuildStylePane))
-                .addGap(30, 30, 30)
+                    .addComponent(outlawStylePane, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(thievesGuildStylePane, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(abahWatchStylePane, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
-                        .addGap(58, 58, 58))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(dromAthraStylePane, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(abahWatchStylePane, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dromAthraStylePane, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -284,7 +279,7 @@ class ThievesGuildForm extends javax.swing.JPanel
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(dromAthraStylePane, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(thievesGuildStylePane, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(265, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -305,6 +300,7 @@ class ThievesGuildForm extends javax.swing.JPanel
         return instance;
     }
 
+    // <editor-fold defaultstate="collapsed" desc="importTables Code">
     static void importTables(LibraryViewData.thievesGuildTableModel thievesGuildTableModel)
     {
         java.util.Vector abahWatchData = thievesGuildTableModel.getAbahWatchTable();
@@ -339,8 +335,9 @@ class ThievesGuildForm extends javax.swing.JPanel
                 getInstance().thievesGuildStyleTable.setValueAt(((java.util.Vector) thievesGuildData.elementAt(i)).elementAt(j), i, j);
             }
         }
-    }
+    }// </editor-fold>
 
+    // <editor-fold defaultstate="collapsed" desc="retrieveTables Code">
     static LibraryViewData.thievesGuildTableModel retrieveTables()
     {
         LibraryViewData.thievesGuildTableModel tables = new LibraryViewData.thievesGuildTableModel();
@@ -349,7 +346,7 @@ class ThievesGuildForm extends javax.swing.JPanel
         tables.setOutlawTable(getInstance().outlawStyleTable.getModel());
         tables.setThievesGuildTable(getInstance().thievesGuildStyleTable.getModel());
         return tables;
-    }
+    }// </editor-fold>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane abahWatchStylePane;

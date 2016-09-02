@@ -17,15 +17,15 @@ class LibraryViewTab extends javax.swing.JTabbedPane
         super();
         super.setTabLayoutPolicy(javax.swing.JTabbedPane.WRAP_TAB_LAYOUT);
         this.baseGamePanel = BasegameForm.getInstance();
-        super.addTab("Motifs Artisanaux (Jeu de Base)", baseGamePanel);
+        super.addTab("Motifs Artisanaux (Jeu de Base)", new javax.swing.JScrollPane(baseGamePanel));
         this.cyrodiilPanel = CyrodiilForm.getInstance();
-        super.addTab("Motifs Artisanaux (Cyrodiil & Imperial City)", cyrodiilPanel);
+        super.addTab("Motifs Artisanaux (Cyrodiil & Imperial City)", new javax.swing.JScrollPane(cyrodiilPanel));
         this.orsiniumPanel = OrsiniumForm.getInstance();
-        super.addTab("Motifs Artisanaux (Orsinium)", orsiniumPanel);
+        super.addTab("Motifs Artisanaux (Orsinium)", new javax.swing.JScrollPane(orsiniumPanel));
         this.thievesGuildPanel = ThievesGuildForm.getInstance();
-        super.addTab("Motifs Artisanaux (Thieves Guild)", thievesGuildPanel);
+        super.addTab("Motifs Artisanaux (Thieves Guild)", new javax.swing.JScrollPane(thievesGuildPanel));
         this.darkBrotherhoodPanel = DarkBrotherhoodForm.getInstance();
-        super.addTab("Motifs Artisanaux (Dark Brotherhood)", darkBrotherhoodPanel);
+        super.addTab("Motifs Artisanaux (Dark Brotherhood)", new javax.swing.JScrollPane(darkBrotherhoodPanel));
     }
 
     static LibraryViewTab getInstance()

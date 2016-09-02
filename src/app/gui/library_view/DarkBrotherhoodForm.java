@@ -260,13 +260,13 @@ class DarkBrotherhoodForm extends javax.swing.JPanel
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(assassinsLeagueStylePane, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(minotaurStylePane, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(darkBrotherhoodStylePane, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
-                    .addComponent(orderHourStylePane))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(minotaurStylePane, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(assassinsLeagueStylePane, javax.swing.GroupLayout.PREFERRED_SIZE, 533, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(darkBrotherhoodStylePane, javax.swing.GroupLayout.PREFERRED_SIZE, 492, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(orderHourStylePane, javax.swing.GroupLayout.PREFERRED_SIZE, 492, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -279,7 +279,7 @@ class DarkBrotherhoodForm extends javax.swing.JPanel
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(orderHourStylePane, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(minotaurStylePane, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(265, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -300,6 +300,7 @@ class DarkBrotherhoodForm extends javax.swing.JPanel
         return instance;
     }
 
+    // <editor-fold defaultstate="collapsed" desc="importTables Code">
     static void importTables(LibraryViewData.darkBrotherhoodTableModel darkBrotherhoodTableModel)
     {
         java.util.Vector assassinsLeagueData = darkBrotherhoodTableModel.getAssassinsLeagueTable();
@@ -334,8 +335,9 @@ class DarkBrotherhoodForm extends javax.swing.JPanel
                 getInstance().orderHourStyleTable.setValueAt(((java.util.Vector) orderHourData.elementAt(i)).elementAt(j), i, j);
             }
         }
-    }
+    }// </editor-fold>
 
+    // <editor-fold defaultstate="collapsed" desc="retrieveTables Code">
     static LibraryViewData.darkBrotherhoodTableModel retrieveTables()
     {
         LibraryViewData.darkBrotherhoodTableModel tables = new LibraryViewData.darkBrotherhoodTableModel();
@@ -344,7 +346,7 @@ class DarkBrotherhoodForm extends javax.swing.JPanel
         tables.setMinotaurTable(getInstance().minotaurStyleTable.getModel());
         tables.setOrderHourTable(getInstance().orderHourStyleTable.getModel());
         return tables;
-    }
+    }// </editor-fold>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane assassinsLeagueStylePane;

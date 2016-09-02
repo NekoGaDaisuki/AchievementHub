@@ -360,6 +360,7 @@ class CyrodiilForm extends javax.swing.JPanel
         return instance;
     }
 
+    // <editor-fold defaultstate="collapsed" desc="importTables Code">
     static void importTables(LibraryViewData.cyrodiilTableModel cyrodiilTableModel)
     {
         java.util.Vector akaviriData = cyrodiilTableModel.getAkaviriTable();
@@ -402,8 +403,9 @@ class CyrodiilForm extends javax.swing.JPanel
                 getInstance().xivkynStyleTable.setValueAt(((java.util.Vector) xivkynData.elementAt(i)).elementAt(j), i, j);
             }
         }
-    }
+    }// </editor-fold>
 
+    // <editor-fold defaultstate="collapsed" desc="retrieveTables Code">
     static LibraryViewData.cyrodiilTableModel retrieveTables()
     {
         LibraryViewData.cyrodiilTableModel tables = new LibraryViewData.cyrodiilTableModel();
@@ -413,7 +415,7 @@ class CyrodiilForm extends javax.swing.JPanel
         tables.setPactTable(getInstance().pactStyleTable.getModel());
         tables.setXivkynTable(getInstance().xivkynStyleTable.getModel());
         return tables;
-    }
+    }// </editor-fold>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane akaviriStylePane;

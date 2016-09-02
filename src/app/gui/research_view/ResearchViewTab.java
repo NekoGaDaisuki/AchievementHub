@@ -17,11 +17,11 @@ class ResearchViewTab extends javax.swing.JTabbedPane
         super();
         super.setTabLayoutPolicy(javax.swing.JTabbedPane.WRAP_TAB_LAYOUT);
         this.clothingPanel = ClothingForm.getInstance();
-        super.addTab("Traits Recherchés (Couture)", clothingPanel);
+        super.addTab("Traits Recherchés (Couture)", new javax.swing.JScrollPane(clothingPanel));
         this.blacksmithingPanel = BlacksmithingForm.getInstance();
-        super.addTab("Traits Recherchés (Forge)", blacksmithingPanel);
+        super.addTab("Traits Recherchés (Forge)", new javax.swing.JScrollPane(blacksmithingPanel));
         this.woodworkingPanel = WoodworkingForm.getInstance();
-        super.addTab("Traits Recherchés (Travail du Bois)", woodworkingPanel);
+        super.addTab("Traits Recherchés (Travail du Bois)", new javax.swing.JScrollPane(woodworkingPanel));
     }
 
     static ResearchViewTab getInstance()

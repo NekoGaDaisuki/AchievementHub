@@ -242,6 +242,7 @@ class OrsiniumForm extends javax.swing.JPanel
         return instance;
     }
 
+    // <editor-fold defaultstate="collapsed" desc="importTables Code">
     static void importTables(LibraryViewData.orsiniumTableModel orsiniumTableModel)
     {
         java.util.Vector ancientsOrcsData = orsiniumTableModel.getAncientsOrcsTable();
@@ -268,8 +269,9 @@ class OrsiniumForm extends javax.swing.JPanel
                 getInstance().trinimacStyleTable.setValueAt(((java.util.Vector) trinimacData.elementAt(i)).elementAt(j), i, j);
             }
         }
-    }
+    }// </editor-fold>
 
+    // <editor-fold defaultstate="collapsed" desc="retrieveTables Code">
     static LibraryViewData.orsiniumTableModel retrieveTables()
     {
         LibraryViewData.orsiniumTableModel tables = new LibraryViewData.orsiniumTableModel();
@@ -277,7 +279,7 @@ class OrsiniumForm extends javax.swing.JPanel
         tables.setMalacathTable(getInstance().malacathStyleTable.getModel());
         tables.setTrinimacTable(getInstance().trinimacStyleTable.getModel());
         return tables;
-    }
+    }// </editor-fold>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane ancientsOrcsStylePane;

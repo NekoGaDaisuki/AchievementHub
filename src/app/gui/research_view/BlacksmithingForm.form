@@ -21,8 +21,13 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="weaponPane" pref="917" max="32767" attributes="0"/>
-          <Component id="heavyArmorPane" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Component id="heavyArmorPane" alignment="0" pref="868" max="32767" attributes="0"/>
+                  <Component id="weaponPane" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace pref="49" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -31,6 +36,7 @@
               <Component id="weaponPane" min="-2" pref="176" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Component id="heavyArmorPane" min="-2" pref="175" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

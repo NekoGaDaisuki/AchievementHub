@@ -165,6 +165,7 @@ class WoodworkingForm extends javax.swing.JPanel
         return instance;
     }
 
+    // <editor-fold defaultstate="collapsed" desc="importTables Code">
     static void importTables(ResearchViewData.woodworkingTableModel woodworkingTableModel)
     {
         java.util.Vector apparelData = woodworkingTableModel.getApparelTable();
@@ -183,15 +184,16 @@ class WoodworkingForm extends javax.swing.JPanel
                 getInstance().weaponTable.setValueAt(((java.util.Vector) weaponData.elementAt(i)).elementAt(j), i, j);
             }
         }
-    }
+    }// </editor-fold>
 
+    // <editor-fold defaultstate="collapsed" desc="retrieveTables Code">
     static ResearchViewData.woodworkingTableModel retrieveTables()
     {
         ResearchViewData.woodworkingTableModel tables = new ResearchViewData.woodworkingTableModel();
         tables.setApparelTable(getInstance().apparelTable.getModel());
         tables.setWeaponTable(getInstance().weaponTable.getModel());
         return tables;
-    }
+    }// </editor-fold>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane apparelPane;

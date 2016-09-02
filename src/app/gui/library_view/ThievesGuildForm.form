@@ -24,23 +24,15 @@
           <Group type="102" attributes="0">
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="outlawStylePane" pref="430" max="32767" attributes="0"/>
-                      <EmptySpace min="80" pref="80" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="thievesGuildStylePane" max="32767" attributes="0"/>
+                  <Component id="outlawStylePane" min="-2" pref="436" max="-2" attributes="0"/>
+                  <Component id="thievesGuildStylePane" min="-2" pref="514" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="abahWatchStylePane" pref="468" max="32767" attributes="0"/>
-                      <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="dromAthraStylePane" min="-2" pref="422" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="abahWatchStylePane" min="-2" pref="468" max="-2" attributes="0"/>
+                  <Component id="dromAthraStylePane" min="-2" pref="422" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -57,7 +49,7 @@
                   <Component id="dromAthraStylePane" min="-2" pref="239" max="-2" attributes="0"/>
                   <Component id="thievesGuildStylePane" alignment="0" min="-2" pref="239" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="265" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -90,7 +82,22 @@
                   <Data value="Motifs Artisanaux 24, Ch. 13 : Les B&#xe2;tons de Hors-la-loi"/>
                   <Data value="Motifs Artisanaux 24, Ch. 14 : Les &#xc9;p&#xe9;es de Hors-la-loi"/>
                 </Column>
-                <Column editable="true" title="" type="java.lang.Boolean"/>
+                <Column editable="true" title="" type="java.lang.Boolean">
+                  <Data value="false"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                  <Data value="null"/>
+                </Column>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -262,7 +269,7 @@
                   <Editor/>
                   <Renderer/>
                 </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="40" resizable="false">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="60" resizable="false">
                   <Title/>
                   <Editor/>
                   <Renderer/>

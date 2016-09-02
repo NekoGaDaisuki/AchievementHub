@@ -49,7 +49,7 @@ class FileMenu extends javax.swing.JMenu
         return instance;
     }
 
-    // <editor-fold defaultstate="collapsed" desc="exitApp source code">
+    // <editor-fold defaultstate="collapsed" desc="exitApp Code">
     private static class exitApp implements java.awt.event.ActionListener
     {
 
@@ -84,7 +84,7 @@ class FileMenu extends javax.swing.JMenu
         private static volatile exitApp INSTANCE;
     }// </editor-fold>
 
-    // <editor-fold defaultstate="collapsed" desc="openFile source code">
+    // <editor-fold defaultstate="collapsed" desc="openFile Code">
     private static class openFile implements java.awt.event.ActionListener
     {
 
@@ -143,7 +143,7 @@ class FileMenu extends javax.swing.JMenu
         private static volatile openFile INSTANCE;
     }// </editor-fold>
 
-    // <editor-fold defaultstate="collapsed" desc="saveFile source code">
+    // <editor-fold defaultstate="collapsed" desc="saveFile Code">
     private static class saveFile implements java.awt.event.ActionListener
     {
 

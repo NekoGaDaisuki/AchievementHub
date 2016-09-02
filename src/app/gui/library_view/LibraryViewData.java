@@ -30,7 +30,7 @@ public abstract class LibraryViewData
         os.writeObject(ThievesGuildForm.retrieveTables());
     }
 
-    // <editor-fold defaultstate="collapsed" desc="basegameTableModel source code">
+    // <editor-fold defaultstate="collapsed" desc="basegameTableModel Code">
     static class basegameTableModel implements java.io.Serializable
     {
 
@@ -130,7 +130,7 @@ public abstract class LibraryViewData
 
     }// </editor-fold>
 
-    // <editor-fold defaultstate="collapsed" desc="cyrodiilTableModel source code">
+    // <editor-fold defaultstate="collapsed" desc="cyrodiilTableModel Code">
     static class cyrodiilTableModel implements java.io.Serializable
     {
 
@@ -217,7 +217,7 @@ public abstract class LibraryViewData
 
     }// </editor-fold>
 
-    // <editor-fold defaultstate="collapsed" desc="darkBrotherhoodDataVector source code">
+    // <editor-fold defaultstate="collapsed" desc="darkBrotherhoodDataVector Code">
     static class darkBrotherhoodTableModel implements java.io.Serializable
     {
 
@@ -291,7 +291,7 @@ public abstract class LibraryViewData
 
     }// </editor-fold>
 
-    // <editor-fold defaultstate="collapsed" desc="orsiniumTableModel source code">
+    // <editor-fold defaultstate="collapsed" desc="orsiniumTableModel Code">
     static class orsiniumTableModel implements java.io.Serializable
     {
 
@@ -352,7 +352,7 @@ public abstract class LibraryViewData
 
     }// </editor-fold>
 
-    // <editor-fold defaultstate="collapsed" desc="thievesGuildDataVector source code">
+    // <editor-fold defaultstate="collapsed" desc="thievesGuildDataVector Code">
     static class thievesGuildTableModel implements java.io.Serializable
     {
 

@@ -144,15 +144,19 @@ class BlacksmithingForm extends javax.swing.JPanel
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(weaponPane, javax.swing.GroupLayout.DEFAULT_SIZE, 917, Short.MAX_VALUE)
-            .addComponent(heavyArmorPane)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(heavyArmorPane, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 868, Short.MAX_VALUE)
+                    .addComponent(weaponPane, javax.swing.GroupLayout.Alignment.LEADING))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(weaponPane, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
-                .addComponent(heavyArmorPane, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(heavyArmorPane, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -173,6 +177,7 @@ class BlacksmithingForm extends javax.swing.JPanel
         return instance;
     }
 
+    // <editor-fold defaultstate="collapsed" desc="importTables Code">
     static void importTables(ResearchViewData.blacksmithingTableModel blacksmithingTableModel)
     {
         java.util.Vector heavyArmorData = blacksmithingTableModel.getHeavyArmorTable();
@@ -191,15 +196,16 @@ class BlacksmithingForm extends javax.swing.JPanel
                 getInstance().weaponTable.setValueAt(((java.util.Vector) weaponData.elementAt(i)).elementAt(j), i, j);
             }
         }
-    }
+    }// </editor-fold>
 
+    // <editor-fold defaultstate="collapsed" desc="retrieveTables Code">
     static ResearchViewData.blacksmithingTableModel retrieveTables()
     {
         ResearchViewData.blacksmithingTableModel tables = new ResearchViewData.blacksmithingTableModel();
         tables.setHeavyArmorTable(getInstance().heavyArmorTable.getModel());
         tables.setWeaponTable(getInstance().weaponTable.getModel());
         return tables;
-    }
+    }// </editor-fold>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane heavyArmorPane;
