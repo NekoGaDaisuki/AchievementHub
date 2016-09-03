@@ -19,6 +19,7 @@ public abstract class LibraryViewData
         DarkBrotherhoodForm.importTables((darkBrotherhoodTableModel) is.readObject());
         OrsiniumForm.importTables((orsiniumTableModel) is.readObject());
         ThievesGuildForm.importTables((thievesGuildTableModel) is.readObject());
+        app.gui.thread.TableRenderer.dispatchOperations();
     }
 
     public static void serializeTables(java.io.ObjectOutputStream os) throws java.io.IOException

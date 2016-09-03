@@ -301,40 +301,12 @@ class DarkBrotherhoodForm extends javax.swing.JPanel
     }
 
     // <editor-fold defaultstate="collapsed" desc="importTables Code">
-    static void importTables(LibraryViewData.darkBrotherhoodTableModel darkBrotherhoodTableModel)
+    static void importTables(LibraryViewData.darkBrotherhoodTableModel tables)
     {
-        java.util.Vector assassinsLeagueData = darkBrotherhoodTableModel.getAssassinsLeagueTable();
-        for (int i = 0; i < assassinsLeagueData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) assassinsLeagueData.elementAt(i)).size(); ++j)
-            {
-                getInstance().assassinsLeagueStyleTable.setValueAt(((java.util.Vector) assassinsLeagueData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
-        java.util.Vector darkBrotherhoodData = darkBrotherhoodTableModel.getDarkBrotherhoodTable();
-        for (int i = 0; i < darkBrotherhoodData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) darkBrotherhoodData.elementAt(i)).size(); ++j)
-            {
-                getInstance().darkBrotherhoodStyleTable.setValueAt(((java.util.Vector) darkBrotherhoodData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
-        java.util.Vector minotaurData = darkBrotherhoodTableModel.getMinotaurTable();
-        for (int i = 0; i < minotaurData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) minotaurData.elementAt(i)).size(); ++j)
-            {
-                getInstance().minotaurStyleTable.setValueAt(((java.util.Vector) minotaurData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
-        java.util.Vector orderHourData = darkBrotherhoodTableModel.getOrderHourTable();
-        for (int i = 0; i < orderHourData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) orderHourData.elementAt(i)).size(); ++j)
-            {
-                getInstance().orderHourStyleTable.setValueAt(((java.util.Vector) orderHourData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
+        app.gui.thread.TableRenderer.addOperation(tables.getAssassinsLeagueTable(), getInstance().assassinsLeagueStyleTable);
+        app.gui.thread.TableRenderer.addOperation(tables.getDarkBrotherhoodTable(), getInstance().darkBrotherhoodStyleTable);
+        app.gui.thread.TableRenderer.addOperation(tables.getMinotaurTable(), getInstance().minotaurStyleTable);
+        app.gui.thread.TableRenderer.addOperation(tables.getOrderHourTable(), getInstance().orderHourStyleTable);
     }// </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="retrieveTables Code">

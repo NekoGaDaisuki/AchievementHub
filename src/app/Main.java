@@ -5,10 +5,6 @@
  */
 package app;
 
-/**
- *
- * @author Lexi
- */
 public class Main
 {
 

@@ -101,7 +101,6 @@ class FileMenu extends javax.swing.JMenu
             {
                 try
                 {
-                    System.out.println("app.gui.FileMenu.openFile.actionPerformed()#start");
                     java.io.InputStream file = new java.io.FileInputStream(FileMenu.getInstance().fileChooser.getSelectedFile().getAbsolutePath());
                     java.io.InputStream buffer = new java.io.BufferedInputStream(file);
                     java.io.ObjectInputStream is = new java.io.ObjectInputStream(buffer);
@@ -160,14 +159,11 @@ class FileMenu extends javax.swing.JMenu
             {
                 try
                 {
-                    System.out.println("app.gui.FileMenu.saveFile.actionPerformed()#start");
                     java.io.OutputStream file = new java.io.FileOutputStream(FileMenu.getInstance().fileChooser.getSelectedFile().getAbsolutePath());
                     java.io.OutputStream buffer = new java.io.BufferedOutputStream(file);
                     java.io.ObjectOutputStream os = new java.io.ObjectOutputStream(buffer);
-                    System.out.println("app.gui.FileMenu.saveFile.actionPerformed()#beforeSerialize");
                     ResearchViewData.serializeTables(os);
                     LibraryViewData.serializeTables(os);
-                    System.out.println("app.gui.FileMenu.saveFile.actionPerformed()#afterSerialize");
                     os.flush();
                     buffer.flush();
                     file.flush();

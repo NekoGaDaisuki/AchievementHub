@@ -301,40 +301,12 @@ class ThievesGuildForm extends javax.swing.JPanel
     }
 
     // <editor-fold defaultstate="collapsed" desc="importTables Code">
-    static void importTables(LibraryViewData.thievesGuildTableModel thievesGuildTableModel)
+    static void importTables(LibraryViewData.thievesGuildTableModel tables)
     {
-        java.util.Vector abahWatchData = thievesGuildTableModel.getAbahWatchTable();
-        for (int i = 0; i < abahWatchData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) abahWatchData.elementAt(i)).size(); ++j)
-            {
-                getInstance().abahWatchStyleTable.setValueAt(((java.util.Vector) abahWatchData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
-        java.util.Vector dromAthraData = thievesGuildTableModel.getDromAthraTable();
-        for (int i = 0; i < dromAthraData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) dromAthraData.elementAt(i)).size(); ++j)
-            {
-                getInstance().dromAthraStyleTable.setValueAt(((java.util.Vector) dromAthraData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
-        java.util.Vector outlawData = thievesGuildTableModel.getOutlawTable();
-        for (int i = 0; i < outlawData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) outlawData.elementAt(i)).size(); ++j)
-            {
-                getInstance().outlawStyleTable.setValueAt(((java.util.Vector) outlawData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
-        java.util.Vector thievesGuildData = thievesGuildTableModel.getThievesGuildTable();
-        for (int i = 0; i < thievesGuildData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) thievesGuildData.elementAt(i)).size(); ++j)
-            {
-                getInstance().thievesGuildStyleTable.setValueAt(((java.util.Vector) thievesGuildData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
+        app.gui.thread.TableRenderer.addOperation(tables.getAbahWatchTable(), getInstance().abahWatchStyleTable);
+        app.gui.thread.TableRenderer.addOperation(tables.getDromAthraTable(), getInstance().dromAthraStyleTable);
+        app.gui.thread.TableRenderer.addOperation(tables.getOutlawTable(), getInstance().outlawStyleTable);
+        app.gui.thread.TableRenderer.addOperation(tables.getThievesGuildTable(), getInstance().thievesGuildStyleTable);
     }// </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="retrieveTables Code">

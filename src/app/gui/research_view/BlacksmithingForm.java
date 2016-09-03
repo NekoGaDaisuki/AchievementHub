@@ -178,24 +178,10 @@ class BlacksmithingForm extends javax.swing.JPanel
     }
 
     // <editor-fold defaultstate="collapsed" desc="importTables Code">
-    static void importTables(ResearchViewData.blacksmithingTableModel blacksmithingTableModel)
+    static void importTables(ResearchViewData.blacksmithingTableModel tables)
     {
-        java.util.Vector heavyArmorData = blacksmithingTableModel.getHeavyArmorTable();
-        for (int i = 0; i < heavyArmorData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) heavyArmorData.elementAt(i)).size(); ++j)
-            {
-                getInstance().heavyArmorTable.setValueAt(((java.util.Vector) heavyArmorData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
-        java.util.Vector weaponData = blacksmithingTableModel.getWeaponTable();
-        for (int i = 0; i < weaponData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) weaponData.elementAt(i)).size(); ++j)
-            {
-                getInstance().weaponTable.setValueAt(((java.util.Vector) weaponData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
+        app.gui.thread.TableRenderer.addOperation(tables.getHeavyArmorTable(), getInstance().heavyArmorTable);
+        app.gui.thread.TableRenderer.addOperation(tables.getWeaponTable(), getInstance().weaponTable);
     }// </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="retrieveTables Code">

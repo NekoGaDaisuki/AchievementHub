@@ -17,6 +17,7 @@ public abstract class ResearchViewData
         BlacksmithingForm.importTables((blacksmithingTableModel) is.readObject());
         ClothingForm.importTables((clothingTableModel) is.readObject());
         WoodworkingForm.importTables((woodworkingTableModel) is.readObject());
+        app.gui.thread.TableRenderer.dispatchOperations();
     }
 
     public static void serializeTables(java.io.ObjectOutputStream os) throws java.io.IOException

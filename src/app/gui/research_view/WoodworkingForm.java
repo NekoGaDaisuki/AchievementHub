@@ -166,24 +166,10 @@ class WoodworkingForm extends javax.swing.JPanel
     }
 
     // <editor-fold defaultstate="collapsed" desc="importTables Code">
-    static void importTables(ResearchViewData.woodworkingTableModel woodworkingTableModel)
+    static void importTables(ResearchViewData.woodworkingTableModel tables)
     {
-        java.util.Vector apparelData = woodworkingTableModel.getApparelTable();
-        for (int i = 0; i < apparelData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) apparelData.elementAt(i)).size(); ++j)
-            {
-                getInstance().apparelTable.setValueAt(((java.util.Vector) apparelData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
-        java.util.Vector weaponData = woodworkingTableModel.getWeaponTable();
-        for (int i = 0; i < weaponData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) weaponData.elementAt(i)).size(); ++j)
-            {
-                getInstance().weaponTable.setValueAt(((java.util.Vector) weaponData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
+        app.gui.thread.TableRenderer.addOperation(tables.getApparelTable(), getInstance().apparelTable);
+        app.gui.thread.TableRenderer.addOperation(tables.getWeaponTable(), getInstance().weaponTable);
     }// </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="retrieveTables Code">

@@ -194,24 +194,10 @@ class ClothingForm extends javax.swing.JPanel
     }
 
     // <editor-fold defaultstate="collapsed" desc="importTables Code">
-    static void importTables(ResearchViewData.clothingTableModel clothingTableModel)
+    static void importTables(ResearchViewData.clothingTableModel tables)
     {
-        java.util.Vector lightArmorData = clothingTableModel.getLightArmorTable();
-        for (int i = 0; i < lightArmorData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) lightArmorData.elementAt(i)).size(); ++j)
-            {
-                getInstance().lightArmorTable.setValueAt(((java.util.Vector) lightArmorData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
-        java.util.Vector mediumArmorData = clothingTableModel.getMediumArmorTable();
-        for (int i = 0; i < mediumArmorData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) mediumArmorData.elementAt(i)).size(); ++j)
-            {
-                getInstance().mediumArmorTable.setValueAt(((java.util.Vector) mediumArmorData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
+        app.gui.thread.TableRenderer.addOperation(tables.getLightArmorTable(), getInstance().lightArmorTable);
+        app.gui.thread.TableRenderer.addOperation(tables.getMediumArmorTable(), getInstance().mediumArmorTable);
     }// </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="retrieveTables Code">

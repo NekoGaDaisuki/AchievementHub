@@ -394,58 +394,18 @@ class BasegameForm extends javax.swing.JPanel
         return instance;
     }
 
-    static void importTables(LibraryViewData.basegameTableModel basegameTableModel)
+    // <editor-fold defaultstate="collapsed" desc="importTables Code">
+    static void importTables(LibraryViewData.basegameTableModel tables)
     {
-        java.util.Vector absouteData = basegameTableModel.getAbsouteTable();
-        for (int i = 0; i < absouteData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) absouteData.elementAt(i)).size(); ++j)
-            {
-                getInstance().absouteStyleTable.setValueAt(((java.util.Vector) absouteData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
-        java.util.Vector alliancesData = basegameTableModel.getAlliancesTable();
-        for (int i = 0; i < alliancesData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) alliancesData.elementAt(i)).size(); ++j)
-            {
-                getInstance().alliancesStylesTable.setValueAt(((java.util.Vector) alliancesData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
-        java.util.Vector dwarwenData = basegameTableModel.getDwarwenTable();
-        for (int i = 0; i < dwarwenData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) dwarwenData.elementAt(i)).size(); ++j)
-            {
-                getInstance().dwarwenStyleTable.setValueAt(((java.util.Vector) dwarwenData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
-        java.util.Vector glassData = basegameTableModel.getGlassTable();
-        for (int i = 0; i < glassData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) glassData.elementAt(i)).size(); ++j)
-            {
-                getInstance().glassStyleTable.setValueAt(((java.util.Vector) glassData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
-        java.util.Vector mercenaryData = basegameTableModel.getMercenaryTable();
-        for (int i = 0; i < mercenaryData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) mercenaryData.elementAt(i)).size(); ++j)
-            {
-                getInstance().mercenaryStyleTable.setValueAt(((java.util.Vector) mercenaryData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
-        java.util.Vector raresStylesData = basegameTableModel.getRaresStylesTable();
-        for (int i = 0; i < raresStylesData.size(); ++i)
-        {
-            for (int j = 1; j < ((java.util.Vector) raresStylesData.elementAt(i)).size(); ++j)
-            {
-                getInstance().raresStylesTable.setValueAt(((java.util.Vector) raresStylesData.elementAt(i)).elementAt(j), i, j);
-            }
-        }
-    }
+        app.gui.thread.TableRenderer.addOperation(tables.getAbsouteTable(), getInstance().absouteStyleTable);
+        app.gui.thread.TableRenderer.addOperation(tables.getAlliancesTable(), getInstance().alliancesStylesTable);
+        app.gui.thread.TableRenderer.addOperation(tables.getDwarwenTable(), getInstance().dwarwenStyleTable);
+        app.gui.thread.TableRenderer.addOperation(tables.getGlassTable(), getInstance().glassStyleTable);
+        app.gui.thread.TableRenderer.addOperation(tables.getMercenaryTable(), getInstance().mercenaryStyleTable);
+        app.gui.thread.TableRenderer.addOperation(tables.getRaresStylesTable(), getInstance().raresStylesTable);
+    }// </editor-fold>
 
+    // <editor-fold defaultstate="collapsed" desc="retrieveTables Code">
     static LibraryViewData.basegameTableModel retrieveTables()
     {
         LibraryViewData.basegameTableModel tables = new LibraryViewData.basegameTableModel();
@@ -456,7 +416,7 @@ class BasegameForm extends javax.swing.JPanel
         tables.setMercenaryTable(getInstance().mercenaryStyleTable.getModel());
         tables.setRaresStylesTable(getInstance().raresStylesTable.getModel());
         return tables;
-    }
+    }// </editor-fold>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane absouteStylePane;
